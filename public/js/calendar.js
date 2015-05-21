@@ -231,34 +231,48 @@ app.controller('CalendarController', ['$scope', '$rootScope', 'ngDialog', 'Calen
         return CalendarService.getPrettyDate(day, year, month-1);
     };
     $scope.sortUsers = function(){
-        diffByUsers($scope.vacations);
-        x=[];
-        $.each($scope.usersList, function(i,n) {
-            x.push(n);
-        });
-        $scope.usersList = x.sort(comparesSurname);
-        var vacationsUser =[];
-        $.each($scope.usersList, function(i,n) {
-            vacationsUser.push($scope.vacationsByUser[n._id]);
-        });
-        $scope.vacationsByUser = vacationsUser;
+        VacationService.getVacations()
+            .success(function (data) {
+                $scope.vacations = data;
+                diffByUsers($scope.vacations);
+                x = [];
+                $.each($scope.usersList, function (i, n) {
+                    x.push(n);
+                });
+                $scope.usersList = x.sort(comparesSurname);
+                var vacationsUser = [];
+                $.each($scope.usersList, function (i, n) {
+                    vacationsUser.push($scope.vacationsByUser[n._id]);
+                });
+                $scope.vacationsByUser = vacationsUser;
+            })
+            .error(function(err) {
+                throw err;
+            })
     };
     function comparesSurname(surname1, surname2) {
         console.log(surname1.common.profile.username.split(' ')[1],surname2.common.profile.username.split(' ')[1]);
         return surname1.common.profile.username.split(' ')[1] > surname2.common.profile.username.split(' ')[1];
     }
     $scope.resortUsers = function(){
-        diffByUsers($scope.vacations);
-        x=[];
-        $.each($scope.usersList, function(i,n) {
-            x.push(n);
-        });
-        $scope.usersList = x.sort(comparesSurnameRevers);
-        var vacationsUser =[];
-        $.each($scope.usersList, function(i,n) {
-            vacationsUser.push($scope.vacationsByUser[n._id]);
-        });
-        $scope.vacationsByUser = vacationsUser;
+        VacationService.getVacations()
+        .success(function (data) {
+                $scope.vacations = data;
+                diffByUsers($scope.vacations);
+                x = [];
+                $.each($scope.usersList, function (i, n) {
+                    x.push(n);
+                });
+                $scope.usersList = x.sort(comparesSurnameRevers);
+                var vacationsUser = [];
+                $.each($scope.usersList, function (i, n) {
+                    vacationsUser.push($scope.vacationsByUser[n._id]);
+                });
+                $scope.vacationsByUser = vacationsUser;
+            })
+            .error(function(err) {
+                throw err;
+            });
     };
     function comparesSurnameRevers(surname1, surname2) {
         console.log(surname1.common.profile.username.split(' ')[1],surname2.common.profile.username.split(' ')[1]);
