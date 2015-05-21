@@ -49,8 +49,8 @@
     </div>
 
 
-    <div horizontal-scroll start-position="{{baseConfig.month}}" class="swipe-area">
-        <div ng-repeat="i in showMonth" class="month-wrapper">
+    <div scroll-mouth horizontal-scroll start-position="{{baseConfig.month}}" class="swipe-area">
+        <div  ng-repeat="i in showMonth" class="month-wrapper" >
             <strong>{{i|monthName}}</strong>
             <div class="days-wrapper">
                 <div class="day" ng-repeat="day in baseConfig.daysRange(baseConfig.days('2015', i))">
@@ -78,3 +78,10 @@
 </div>
 
 <div style="clear: both"></div>
+
+
+
+<script type="text/javascript">
+
+
+</script>

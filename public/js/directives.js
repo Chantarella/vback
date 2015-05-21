@@ -157,4 +157,24 @@ app.directive('rangeLine', function() {
     };
 });
 
+app.directive('scrollMouth', function() {
+    return {
+        restrict: 'A',
+        link: function(scope, $elm, atrs) {
+            // $elm.bind('scroll', function() {
+            $($elm).scroll(function(){
+                var sticky = $('.days-wrapper'),
+                    scroll = $($elm).scrollTop();
 
+                if (scroll >= 1) sticky.addClass('fixed').css({
+                    top:scroll
+                });
+                else sticky.removeClass('fixed');
+            });
+
+            //   });
+
+            console.log($elm);
+        }
+    };
+});

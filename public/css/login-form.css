@@ -99,3 +99,9 @@ p.sign_up {
 p.sign_up a {
     color: #fff;
 }
+.alert-success {
+    background-color: #4caf50;
+    }
+.alert{
+    font-size: 12pt;
+}

@@ -291,4 +291,6 @@ app.controller('CalendarController', ['$scope', '$rootScope', 'ngDialog', 'Calen
         run();
     });
 
+
+
 }]);

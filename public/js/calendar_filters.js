@@ -45,4 +45,5 @@ app.filter('rank', [function() {
 
         return rank_list[rankNum];
     }
+
 }]);

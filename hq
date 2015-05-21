@@ -1,0 +1,245 @@
+[33mcommit 1bfe9c92d6224f4c3b5fa26834476ee557abf9cb[m
+Author: Yuliya1994 <yuliaharchenko1994@gmail.com>
+Date:   Tue May 19 17:11:05 2015 +0300
+
+    add input first name, last name
+
+[33mcommit 33671b8b9b12e4b943e56d45a18aa83cace4241f[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Mon May 4 08:53:39 2015 +0300
+
+    update github app_id
+
+[33mcommit ef598ca4101eaed481f563d287d8ac22424a7e2c[m
+Author: Vladik <uacasszx@gmail.com>
+Date:   Sun May 3 20:13:08 2015 +0300
+
+    fix edit user bug, add welcome user page, fix order of users, fix auth
+
+[33mcommit 55d77b0a32123a0ce181431e1144572c1390cc1a[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Wed Apr 29 12:01:35 2015 +0300
+
+    bit fixes2
+
+[33mcommit fab8b5975ae4b1ad55bacada76c529c9198d3309[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Wed Apr 29 11:58:53 2015 +0300
+
+    bit fixes
+
+[33mcommit 7120db0906f62e79712c0b00283797ce706bf9c4[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Wed Apr 15 17:25:48 2015 +0300
+
+    add mailer
+
+[33mcommit ba12282826dec71997c188dc641116929450cb8f[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Wed Apr 15 10:41:44 2015 +0300
+
+    fix order of users in left panel
+
+[33mcommit 8acef42a923d50db77f66f8c8f35fcee9b709445[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Tue Apr 14 12:56:55 2015 +0300
+
+    vkontakte auth, subscribe types, adding vacations by manager, css fixes
+
+[33mcommit 2689845b8aa76ff673e9b9c0f14ef9b719494ad2[m
+Author: Vladik <uacasszx@gmail.com>
+Date:   Tue Apr 14 00:48:14 2015 +0300
+
+    remake admin/manager view (div ranges instead of table), fix directives, fix manager view
+
+[33mcommit e035145fc5dd8b21b75479dcf4950c515d9d1af1[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Fri Apr 10 16:53:47 2015 +0300
+
+    manager errors fix
+
+[33mcommit ac124da6d597cd8f7b89cec0dcc1d48e8c3cead0[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Thu Apr 9 16:42:25 2015 +0300
+
+    add manager role, users forms validations
+
+[33mcommit 692f295269aab001f6a5955ee021eb416b8d257c[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Mon Apr 6 16:49:01 2015 +0300
+
+    Start month position, fixes, start to make db-filling script
+
+[33mcommit 29d157889633fe8b3f32aea8376b1a7226b0d041[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Mon Apr 6 10:30:13 2015 +0300
+
+    horizontal scrolling, correct ranges
+
+[33mcommit 121bac21b6e7bfbe3840bc2845035eebc2c4e3e7[m
+Author: Vladik <uacasszx@gmail.com>
+Date:   Sun Apr 5 22:50:23 2015 +0300
+
+    bit changes
+
+[33mcommit 2733f24dbdc6a246e521c3c43849ab9f67fe2608[m
+Author: Vladik <uacasszx@gmail.com>
+Date:   Fri Apr 3 14:36:23 2015 +0300
+
+    add month navigation, basic vacations output
+
+[33mcommit e5874cdeabacc9ae6eb3b086a26cc8c117ea922c[m
+Author: Vladik <uacasszx@gmail.com>
+Date:   Thu Apr 2 16:18:25 2015 +0300
+
+    correct day titles, real ranges
+
+[33mcommit 7610fbe52fceda5444b597e96e3ce49682995a42[m
+Author: Vladik <uacasszx@gmail.com>
+Date:   Thu Apr 2 15:14:31 2015 +0300
+
+    new view for swipe
+
+[33mcommit 6af008886d9f9cc631b2abc37550946a06d252e4[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Fri Mar 27 15:20:13 2015 +0200
+
+    main view with tooltips
+
+[33mcommit e44e66224880bbdcc39ebb397d8d7301b0f9c9f3[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Fri Mar 27 08:44:16 2015 +0200
+
+    upgrade .gitignore
+
+[33mcommit 0dd078dfbc5448dd4cd84e6c1548772c8aa54ae1[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Fri Mar 27 08:37:38 2015 +0200
+
+    rm access.log
+
+[33mcommit bb133277341670cdc961264f65b07e5f1ac9c0a5[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Thu Mar 26 17:23:44 2015 +0200
+
+    add vacation comments
+
+[33mcommit 4c6381bec90b3e8fd4476d2c1fb3ee15803a8373[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Thu Mar 26 14:57:50 2015 +0200
+
+    add subscribers list
+
+[33mcommit 24ec7b8091ba49f44df04a4c39145ed874cc2093[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Thu Mar 26 10:02:05 2015 +0200
+
+    bit upgrade frontend
+
+[33mcommit e4506a013e092185a77cb65ed168fee0f8f5a3e7[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Wed Mar 25 16:56:33 2015 +0200
+
+    package.json updated
+
+[33mcommit e936531481500d166b45ed22e6e444c6605ed27c[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Wed Mar 25 16:54:54 2015 +0200
+
+    add Procfile, rm access log
+
+[33mcommit 42bb8e34e2c97ece962889a29dcf79b10a799d48[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Wed Mar 25 16:18:33 2015 +0200
+
+    list view, user settings, vacation-list, user history
+
+[33mcommit cc5edcf3bdc4760faf3869a6ebf9861d8c327c68[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Tue Mar 24 16:43:56 2015 +0200
+
+    update api, real data in views
+
+[33mcommit bcfe376ac5c1165324b792c5d6f0eada0452210e[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Mon Mar 23 17:24:16 2015 +0200
+
+    frontend routing, start creating api
+
+[33mcommit 76a16c779fccd07a0107d7c486853d7885258d83[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Mon Mar 23 08:36:19 2015 +0200
+
+    remove access log
+
+[33mcommit 7506ff0e2e5e1ec0317659a126ac5882658a21ab[m
+Author: Vladik <uacasszx@gmail.com>
+Date:   Sun Mar 22 23:39:35 2015 +0200
+
+    new vacation window template fix
+
+[33mcommit 6eff6668b9d5ce83d81557960d40d653df281007[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Fri Mar 20 17:08:47 2015 +0200
+
+    create user main template
+
+[33mcommit ab12a80d19c776a78fcdbf268f946bb394d83f62[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Thu Mar 19 17:21:45 2015 +0200
+
+    add base templating, vacation mode
+
+[33mcommit fea36127020e49ae55f48487ad8af92f592369e7[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Thu Mar 19 12:47:06 2015 +0200
+
+    remove ignored bower components
+
+[33mcommit f063f699c41ee2541240407624ad328ade17c6d7[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Thu Mar 19 12:44:23 2015 +0200
+
+    merge backend with angular app
+
+[33mcommit 1121d85f97ced7cace57345996636cef55e60b21[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Wed Mar 18 17:15:40 2015 +0200
+
+    update google auth (not working on localhost)
+
+[33mcommit d09c703c661c2b788578f61e99732f5606b30106[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Wed Mar 18 11:07:11 2015 +0200
+
+    add github auth, need update google to oAuth
+
+[33mcommit 190303fbfcc1d9755397ab55b037bb5f7e40c112[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Wed Mar 18 10:24:43 2015 +0200
+
+    add google auth
+
+[33mcommit 165932c49d7a662a07c1dd4f22dde22dfa953c87[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Wed Mar 18 09:17:27 2015 +0200
+
+    add flash messages
+
+[33mcommit 6e2f266be2a2c07a45a3e8cf568a579699738ce7[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Tue Mar 17 17:16:36 2015 +0200
+
+    working local auth
+
+[33mcommit 1a48bb25eeb8913a6636fe9badb1d16cd2db1d45[m
+Author: Vladislav <uacasszx@gmail.com>
+Date:   Tue Mar 17 15:28:16 2015 +0200
+
+    sign up
+
+[33mcommit 8dcfef2c5f30e3b89f581602c3aef9bd0b63730b[m
+Author: Vladik <uacasszx@gmail.com>
+Date:   Mon Mar 16 22:29:59 2015 +0200
+
+    init

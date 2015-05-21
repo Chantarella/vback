@@ -1,8 +1,8 @@
 /*
-* Levels:
-* 0 - Admin
-* 1 - User
-* */
+ * Levels:
+ * 0 - Admin
+ * 1 - User
+ * */
 var LocalStrategy = require('passport-local').Strategy;
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
@@ -16,7 +16,7 @@ var GITHUB_CLIENT_SECRET = "8ecb3e3a382f0d911a9fd624e5f5f2436b922ffd";
 
 var VKONTAKTE_APP_ID = "4875977";
 var VKONTAKTE_APP_SECRET = "FG5gyYmwD2NHyY5k9UX0";
-
+var re = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
 module.exports = function(passport) {
     passport.serializeUser(function(user, done) {
         done(null, user.id);
@@ -29,17 +29,21 @@ module.exports = function(passport) {
     });
 
     passport.use('local-signup', new LocalStrategy({
-        usernameField: 'email',
-        passwordField: 'password',
-        nameuserField: 'nameuser',
-        surnameField: 'surname',
-        passReqToCallback: true
-    }, function(req, email,  password, nameuser,  surname, done){
+            //firstnameField: 'firstname',
+            //surnameField: 'surname',
+            usernameField: 'email',
+            passwordField: 'password',
+            passReqToCallback: true
+        }, function(req ,email,  password, done){
+//
             User.findOne({'local.email': email}, function(err, user) {
                 if(err){
                     return done(err);
                 }
 
+                if(re.test(email)==false) {
+                    return done(null, false, {message: 'email is invalid'});
+                }
                 if(user){
                     return done(null, false, {message: 'email is taken'})
                 } else {
@@ -48,7 +52,8 @@ module.exports = function(passport) {
                     newUser.local.username = nameuser +' '+surname;
                     console.log(newUser.local.username);
                     newUser.local.password = password;
-
+                    //newUser.local.firstname = firstname;
+                    //newUser.local.surname = surname;
                     var commonProfile = {
                         username: nameuser +' '+surname,
                         email: email,
@@ -72,11 +77,12 @@ module.exports = function(passport) {
     ));
 
     passport.use('local-login', new LocalStrategy({
+
             usernameField : 'email',
             passwordField : 'password',
             passReqToCallback : true
         },
-        function(req, email, password, done) {
+        function(req, email, password,done) {
             User.findOne({ 'local.email' :  email }, function(err, user) {
                 if (err) {
                     return done(err);

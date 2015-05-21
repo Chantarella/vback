@@ -52,7 +52,7 @@
             </tr>
 
             <tr ng-repeat="user in userList | orderBy:predicate:reverse">
-                <td>{{user.common.profile.username.split(' ')[1] +' '+ user.common.profile.username.split(' ')[0] || 'Имя не указано'}}</td>
+                <td>{{user.common.profile.username ? (user.common.profile.username.split(' ')[1] +' '+ user.common.profile.username.split(' ')[0]) : 'Имя не указано'}}</td>
                 <td>{{user.common.profile.email}}</td>
                 <td><span ng-click="deleteUser(user._id)"><i class="fa fa-times"></i></span></td>
             </tr>

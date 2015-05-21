@@ -7,9 +7,7 @@ block content
         | Войти
         form(method='post', action='/auth/login')
             div.error.text-warning= message
-
-            input#username(type='text', placeholder='Email...', name='email')
-
+            input#username(type='email', placeholder='Email...', name='email')
             input#password(type='password', placeholder='******', name='password')
 
             .text-center.social
