@@ -2,7 +2,6 @@ app.controller('CalendarController', ['$scope', '$rootScope', 'ngDialog', 'Calen
     $rootScope.$on('$routeChangeStart', function(event, currRoute, prevRoute){
         $rootScope.animation = currRoute.animation;
     });
-
     $scope.loaded = false;
 
     $scope.baseConfig = CalendarService;
@@ -16,6 +15,8 @@ app.controller('CalendarController', ['$scope', '$rootScope', 'ngDialog', 'Calen
 
     $scope.comment = false;
     $scope.commented = false;
+
+    //$scope.predicate = 'common.profile.username';
 
     $scope.monthHider = {
         startMonth: '1',
@@ -65,7 +66,7 @@ app.controller('CalendarController', ['$scope', '$rootScope', 'ngDialog', 'Calen
         VacationService.getVacations()
             .success(function (data) {
                 $scope.vacations = data;
-console.log(data);
+                console.log(data);
                 angular.forEach($scope.vacations, function (el) {
                     UserService.getUser(el.user_id)
                         .success(function (user, status) {
@@ -74,7 +75,6 @@ console.log(data);
                             el.rank = rank_list[user.common.rank] || 'Сотрудник';
 
                             $scope.usersList[el.user_id] = angular.fromJson(user);
-
                         })
                         .error(function (err, status) {
                             throw new Error(err)
@@ -102,12 +102,10 @@ console.log(data);
                 $scope.vacationsByUser[vac.user_id] = [];
             }
         });
-
         for(var user in $scope.vacationsByUser) {
             $scope.userIds.push(user);
             for(var i = 1; i <= 12; i++) {
                 $scope.vacationsByUser[user][i] = [];
-
                 vacations.forEach(function(vac) {
                     if(~vac.month.indexOf(i) && user === vac.user_id) {
                         $scope.vacationsByUser[user][i].push(angular.fromJson(vac));
@@ -232,10 +230,42 @@ console.log(data);
     $scope.prettyDate = function(day, year, month) {
         return CalendarService.getPrettyDate(day, year, month-1);
     };
-
+    $scope.sortUsers = function(){
+        diffByUsers($scope.vacations);
+        x=[];
+        $.each($scope.usersList, function(i,n) {
+            x.push(n);
+        });
+        $scope.usersList = x.sort(comparesSurname);
+        var vacationsUser =[];
+        $.each($scope.usersList, function(i,n) {
+            vacationsUser.push($scope.vacationsByUser[n._id]);
+        });
+        $scope.vacationsByUser = vacationsUser;
+    };
+    function comparesSurname(surname1, surname2) {
+        console.log(surname1.common.profile.username.split(' ')[1],surname2.common.profile.username.split(' ')[1]);
+        return surname1.common.profile.username.split(' ')[1] > surname2.common.profile.username.split(' ')[1];
+    }
+    $scope.resortUsers = function(){
+        diffByUsers($scope.vacations);
+        x=[];
+        $.each($scope.usersList, function(i,n) {
+            x.push(n);
+        });
+        $scope.usersList = x.sort(comparesSurnameRevers);
+        var vacationsUser =[];
+        $.each($scope.usersList, function(i,n) {
+            vacationsUser.push($scope.vacationsByUser[n._id]);
+        });
+        $scope.vacationsByUser = vacationsUser;
+    };
+    function comparesSurnameRevers(surname1, surname2) {
+        console.log(surname1.common.profile.username.split(' ')[1],surname2.common.profile.username.split(' ')[1]);
+        return surname1.common.profile.username.split(' ')[1] < surname2.common.profile.username.split(' ')[1];
+    }
     $scope.$on('deleteUser', function (event, data) {
         console.log('removed user');
-
         $scope.vacations = null;
         $scope.vacationsByUser = null;
         $scope.userHistory = null;
