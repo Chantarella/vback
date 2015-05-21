@@ -40,7 +40,7 @@
 
         <div class="col-md-12">
             <span class="swipe-calendar-header" style="margin-bottom: 3px;"><a href="" ng-click="sortUsers()">Сотрудник</a>(<a href="" ng-click="resortUsers()">^</a>)</span>
-            <div ng-repeat="vac in usersList | orderBy:reverse" style="margin-top: 3px; min-height: 22px; font-size:9px; text-align: right;">
+            <div ng-repeat="vac in usersList" style="margin-top: 3px; min-height: 22px; font-size:9px; text-align: right;">
                 <a title="{{vac.common.profile}}" ng-click="showUserHistory(vac.common.id)" href="#">
                     {{vac.common.profile.username.split(' ')[1] +' '+ vac.common.profile.username.split(' ')[0]  || vac.common.profile.email}}
                 </a>
